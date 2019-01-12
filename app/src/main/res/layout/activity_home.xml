@@ -10,7 +10,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/layout_toolbar"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
+            android:layout_height="70dp"
+            android:elevation="10dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -35,7 +36,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/chats"
                 android:textStyle="bold"
-                android:textSize="20sp"
+                android:textSize="25sp"
                 android:textColor="@color/colorBlack"
                 android:layout_marginStart="12dp"
                 app:layout_constraintStart_toEndOf="@id/cv_user"
@@ -77,13 +78,12 @@
             android:id="@+id/pagerTabs"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:elevation="5dp"
+            android:elevation="10dp"
             android:paddingBottom="4dp"
             app:tabIndicatorHeight="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@id/viewPager"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

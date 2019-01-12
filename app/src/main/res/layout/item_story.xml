@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@color/colorGrayWhite"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/cv_background"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@color/colorGrayWhite"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/cv_image"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            tools:src="@drawable/user_1"
+            app:civ_border_width="2dp"
+            app:civ_border_color="@color/colorWhite"
+            app:layout_constraintTop_toTopOf="@id/cv_background"
+            app:layout_constraintStart_toStartOf="@id/cv_background"
+            app:layout_constraintEnd_toEndOf="@id/cv_background"
+            app:layout_constraintBottom_toBottomOf="@id/cv_background"/>
+
+    <View
+            android:id="@+id/view_online"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:background="@drawable/shape_round_background_green"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintVertical_bias="1"
+            app:layout_constraintTop_toTopOf="@id/cv_image"
+            app:layout_constraintBottom_toBottomOf="@id/cv_image"
+            app:layout_constraintStart_toStartOf="@id/cv_image"
+            app:layout_constraintEnd_toEndOf="@id/cv_image"/>
+
+    <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Your Story"
+            android:textSize="12sp"
+            android:textColor="@color/colorGray"
+            android:layout_marginTop="5dp"
+            android:textStyle="bold"
+            app:layout_constraintVertical_bias="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cv_background"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
