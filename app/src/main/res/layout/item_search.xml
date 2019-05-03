@@ -17,6 +17,7 @@
             android:paddingStart="15dp"
             android:paddingEnd="15dp"
             android:hint="Search"
+            android:focusable="false"
             android:drawablePadding="5dp"
             android:drawableStart="@drawable/ic_search"
             app:layout_constraintEnd_toEndOf="parent"

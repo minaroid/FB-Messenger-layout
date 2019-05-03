@@ -5,8 +5,30 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorBlue</item>
-        <item name="android:statusBarColor">@color/colorWhite</item>
+        <item name="colorAccent">@color/colorPrimaryDark</item>
+    </style>
+
+
+    <style name="TitleTheme" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/ColorText</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textSize">@dimen/textSizeText</item>
+    </style>
+
+    <style name="HeaderTheme" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/ColorText</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="subTitleTheme" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/ColorText</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ContentTheme" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/ColorText</item>
+        <item name="android:fontFamily">@font/roboto_light</item>
+        <item name="android:textSize">@dimen/textSizeText</item>
     </style>
 
 </resources>

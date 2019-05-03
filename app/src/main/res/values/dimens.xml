@@ -1,6 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <dimen name="margin">20dp</dimen>
-    <dimen name="margin_extra">50dp</dimen>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!--Main-->
+    <dimen name="margin_nano">4dp</dimen>
+    <dimen name="margin_micro">8dp</dimen>
+    <dimen name="margin">16dp</dimen>
+    <dimen name="margin_extra">24dp</dimen>
+    <dimen name="margin_ultra">32dp</dimen>
+    <dimen name="margin_ultimate">40dp</dimen>
+    <dimen name="padding_nano">4dp</dimen>
+    <dimen name="padding_micro">8dp</dimen>
+    <dimen name="padding">16dp</dimen>
+    <dimen name="padding_extra">24dp</dimen>
+    <dimen name="padding_ultra">32dp</dimen>
+    <dimen name="padding_ultimate">64dp</dimen>
+    <dimen name="drawablePadding">8dp</dimen>
+    <dimen name="margin_ultimate_plus">48dp</dimen>
+    <dimen name="margin_ultimate_triple">60dp</dimen>
+    <dimen name="margin_ultimate_triple_plus">75dp</dimen>
+    <!--Text-->
+    <dimen name="textSizeHeadline">60sp</dimen>
+    <dimen name="textSizeHeadline1">40sp</dimen>
+    <dimen name="textSizeHeadline2">32sp</dimen>
+    <dimen name="textSizeHeadline3">24sp</dimen>
+    <dimen name="textSizeHeadline4">20sp</dimen>
+    <dimen name="textSizeTitle">18sp</dimen>
+    <dimen name="textSizeText">14sp</dimen>
+    <dimen name="textSizeSubtext1">12sp</dimen>
+    <dimen name="textSizeSubText2">10sp</dimen>
 
+    <dimen name="height_divider">0.5dp</dimen>
+    <dimen name="cornerRadius">12dp</dimen>
+    <dimen name="chatsItemRadius">37dp</dimen>
+    <dimen name="borderWidth">3dp</dimen>
+    <dimen name="cardCornerRadius">10dp</dimen>
+    <dimen name="design_bottom_navigation_text_size" tools:ignore="PrivateResource">12sp</dimen>
+    <dimen name="design_bottom_navigation_active_text_size" tools:ignore="PrivateResource">12sp</dimen>
+    <dimen name="highElevation">8dp</dimen>
+    <dimen name="elevation">5dp</dimen>
+    <dimen name="sizeAvatarChat">60dp</dimen>
+    <dimen name="sizeAvatarMap">50dp</dimen>
+    <dimen name="markerTextViewWidth">80dp</dimen>
 </resources>

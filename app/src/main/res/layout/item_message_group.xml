@@ -62,7 +62,6 @@
             android:visibility="gone"
             android:textSize="8sp"
             android:textStyle="bold"
-            android:textColor="@color/colorBlack"
             android:background="@drawable/shape_rectangle_background_green"
             app:layout_constraintHorizontal_bias="1"
             app:layout_constraintVertical_bias="1"
@@ -77,7 +76,7 @@
             android:layout_height="wrap_content"
             tools:text="Mina George"
             android:textSize="16sp"
-            android:textColor="@color/colorBlack"
+            style="@style/TitleTheme"
             android:layout_marginStart="15dp"
             app:layout_constraintVertical_bias="0"
             app:layout_constraintStart_toEndOf="@id/images_container"
@@ -91,7 +90,9 @@
             android:lines="1"
             android:layout_marginTop="10dp"
             android:ellipsize="end"
+            android:maxWidth="140dp"
             tools:text="hi mina , "
+            style="@style/ContentTheme"
             app:layout_constraintTop_toBottomOf="@id/tv_name"
             app:layout_constraintStart_toStartOf="@id/tv_name"/>
     <TextView
@@ -100,6 +101,8 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             tools:text="ffff"
+            style="@style/ContentTheme"
+
             app:layout_constraintBottom_toBottomOf="@id/tv_message"
             app:layout_constraintTop_toTopOf="@id/tv_message"
             app:layout_constraintStart_toEndOf="@id/tv_message"/>
