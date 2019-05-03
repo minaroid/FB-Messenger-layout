@@ -16,13 +16,13 @@ class StoriesAdapter : RecyclerView.Adapter<StoriesAdapter.ViewHolder>() {
     val stories: ArrayList<StoryModel> = ArrayList()
 
     init {
-        stories.add(StoryModel("Your Story", false, false, true, false,R.drawable.user_4))
-        stories.add(StoryModel("Your Story", false, false, false, true,R.drawable.user_2))
-        stories.add(StoryModel("Mina", true, true, false, false,R.drawable.user_3))
-        stories.add(StoryModel("Ayman", true, true, false, false,R.drawable.user_1))
-        stories.add(StoryModel("Mai", true, true, false, false,R.drawable.user_2))
-        stories.add(StoryModel("Ayman", false, false, false, false,R.drawable.user_4))
-        stories.add(StoryModel("Mai", false, false, false, false,R.drawable.user_3))
+        stories.add(StoryModel("Your Story", false, false, true, false, R.drawable.user_4))
+        stories.add(StoryModel("Your Story", false, false, false, true, R.drawable.user_2))
+        stories.add(StoryModel("Mina", true, true, false, false, R.drawable.user_3))
+        stories.add(StoryModel("Ayman", true, true, false, false, R.drawable.user_1))
+        stories.add(StoryModel("Mai", true, true, false, false, R.drawable.user_2))
+        stories.add(StoryModel("Ayman", false, false, false, false, R.drawable.user_4))
+        stories.add(StoryModel("Mai", false, false, false, false, R.drawable.user_3))
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -36,7 +36,6 @@ class StoriesAdapter : RecyclerView.Adapter<StoriesAdapter.ViewHolder>() {
     }
 
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        private val backgroundImage = view.cv_background!!
         private val image = view.cv_image!!
         private val onlineView = view.view_online!!
         private val title = view.tv_title!!
@@ -47,9 +46,8 @@ class StoriesAdapter : RecyclerView.Adapter<StoriesAdapter.ViewHolder>() {
             setTopBottomMargins()
             if (storyModel.isAddStory) {
                 title.text = storyModel.name
-                image.visibility = GONE
                 onlineView.visibility = GONE
-                backgroundImage.setImageResource(R.drawable.add__)
+                image.setImageResource(R.drawable.add__)
             } else if (storyModel.isYourStory) {
                 title.text = storyModel.name
                 onlineView.visibility = GONE
@@ -61,9 +59,9 @@ class StoriesAdapter : RecyclerView.Adapter<StoriesAdapter.ViewHolder>() {
                 else
                     onlineView.visibility = GONE
                 if (storyModel.isStory) {
-                    backgroundImage.setImageResource(R.color.colorBlue)
+                    image.isActivated = true
                     title.setTypeface(null, Typeface.BOLD)
-                    title.setTextColor(context.resources.getColor(R.color.colorBlack))
+                    title.setTextColor(context.resources.getColor(R.color.ColorText))
                 }
                 image.setImageResource(storyModel.image)
             }

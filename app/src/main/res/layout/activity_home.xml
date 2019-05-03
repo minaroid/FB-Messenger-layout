@@ -5,13 +5,14 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.activities.HomeActivity">
+        tools:context=".ui.activities.HomeActivity"
+        android:background="@color/colorWhite">
 
     <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/layout_toolbar"
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:elevation="10dp"
+            android:background="@color/colorWhite"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -36,8 +37,8 @@
                 android:layout_height="wrap_content"
                 android:text="@string/chats"
                 android:textStyle="bold"
-                android:textSize="25sp"
-                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textSizeHeadline4"
+                style="@style/TitleTheme"
                 android:layout_marginStart="12dp"
                 app:layout_constraintStart_toEndOf="@id/cv_user"
                 app:layout_constraintTop_toTopOf="@id/cv_user"
@@ -65,10 +66,11 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.viewpager.widget.ViewPager
+    <messenger.mina.com.messenger.utils.CustomViewPager
             android:id="@+id/viewPager"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            app:swipeable="false"
             app:layout_constraintBottom_toTopOf="@+id/pagerTabs"
             app:layout_constraintTop_toBottomOf="@id/layout_toolbar"
             app:layout_constraintStart_toStartOf="parent"
@@ -76,11 +78,15 @@
 
     <com.google.android.material.tabs.TabLayout
             android:id="@+id/pagerTabs"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:elevation="10dp"
             android:paddingBottom="4dp"
             app:tabIndicatorHeight="0dp"
+            app:tabMode="fixed"
+            app:tabGravity="fill"
+            app:tabPaddingEnd="0dp"
+            app:tabPaddingStart="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@id/viewPager"
             app:layout_constraintStart_toStartOf="parent"

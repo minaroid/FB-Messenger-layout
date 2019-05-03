@@ -18,7 +18,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-           />
+    />
 
     <TextView
             android:id="@+id/tv_name"
@@ -27,7 +27,7 @@
             android:text="Mina George"
             android:textSize="16sp"
             android:textStyle="bold"
-            android:textColor="@color/colorBlack"
+            style="@style/TitleTheme"
             android:layout_marginStart="15dp"
             app:layout_constraintVertical_bias="0"
             app:layout_constraintStart_toEndOf="@id/cv_image"
@@ -39,7 +39,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Sponsored"
-            android:textColor="@color/colorGray"
             android:layout_marginTop="5dp"
             app:layout_constraintTop_toBottomOf="@+id/tv_name"
             app:layout_constraintStart_toStartOf="@id/tv_name"/>
@@ -52,6 +51,7 @@
             android:layout_marginTop="5dp"
             android:maxLines="2"
             android:ellipsize="end"
+            android:textColor="#000"
             android:maxWidth="150dp"
             app:layout_constraintTop_toBottomOf="@+id/tv_sponsoer"
             app:layout_constraintStart_toStartOf="@id/tv_name"/>
@@ -60,7 +60,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="See more"
-            android:textColor="@color/colorGray"
             android:layout_marginStart="5dp"
             app:layout_constraintVertical_bias="1"
             app:layout_constraintStart_toEndOf="@id/tv_description"

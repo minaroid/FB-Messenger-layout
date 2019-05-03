@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.chauthai.swipereveallayout.ViewBinderHelper
 
 import kotlinx.android.synthetic.main.item_message_group.view.*
 import messenger.mina.com.messenger.R
@@ -15,7 +16,22 @@ class GroupsMessagesAdapter : RecyclerView.Adapter<GroupsMessagesAdapter.ViewHol
     private val messages: ArrayList<GroupModel> = ArrayList()
 
     init {
-        messages.add(GroupModel("My team", "Hi, mina", "10:35 PM", 2, true, true, "", false, false,R.drawable.user_3,R.drawable.user_1))
+
+        messages.add(
+            GroupModel(
+                "My team",
+                "Hi, mina",
+                "10:35 PM",
+                2,
+                true,
+                true,
+                "",
+                false,
+                false,
+                R.drawable.user_3,
+                R.drawable.user_1
+            )
+        )
         messages.add(
             GroupModel(
                 "Tech Team",
@@ -27,7 +43,7 @@ class GroupsMessagesAdapter : RecyclerView.Adapter<GroupsMessagesAdapter.ViewHol
                 "33m",
                 true,
                 true,
-                R.drawable.user_1,
+                R.drawable.user_3,
                 R.drawable.user_3
             )
         )
@@ -55,10 +71,24 @@ class GroupsMessagesAdapter : RecyclerView.Adapter<GroupsMessagesAdapter.ViewHol
                 false,
                 true,
                 "",
-                false, false,R.drawable.user_4,R.drawable.user_3
+                false, false, R.drawable.user_4, R.drawable.user_3
             )
         )
-        messages.add(GroupModel("team 2", "Hi, mina", "10:35 PM", 2, false, true, "", false, true,R.drawable.user_2,R.drawable.user_3))
+        messages.add(
+            GroupModel(
+                "team 2",
+                "Hi, mina",
+                "10:35 PM",
+                2,
+                false,
+                true,
+                "",
+                false,
+                true,
+                R.drawable.user_2,
+                R.drawable.user_3
+            )
+        )
         messages.add(
             GroupModel(
                 "My Team",
@@ -69,10 +99,24 @@ class GroupsMessagesAdapter : RecyclerView.Adapter<GroupsMessagesAdapter.ViewHol
                 false,
                 "33m",
                 true,
-                false ,R.drawable.user_1,R.drawable.user_3
+                false, R.drawable.user_3, R.drawable.user_3
             )
         )
-        messages.add(GroupModel("Team 1", "Hi, mina how are you ???", "Thu", 2, true, false, "21m", true, true,R.drawable.user_4,R.drawable.user_3))
+        messages.add(
+            GroupModel(
+                "Team 1",
+                "Hi, mina how are you ???",
+                "Thu",
+                2,
+                true,
+                false,
+                "21m",
+                true,
+                true,
+                R.drawable.user_4,
+                R.drawable.user_3
+            )
+        )
         messages.add(
             GroupModel(
                 "Team 3",
@@ -82,7 +126,7 @@ class GroupsMessagesAdapter : RecyclerView.Adapter<GroupsMessagesAdapter.ViewHol
                 false,
                 true,
                 "",
-                false, false,R.drawable.user_2,R.drawable.user_3
+                false, false, R.drawable.user_2, R.drawable.user_3
             )
         )
     }
@@ -115,15 +159,9 @@ class GroupsMessagesAdapter : RecyclerView.Adapter<GroupsMessagesAdapter.ViewHol
             name.text = messageModel.name
             messegeTime.text = ". ${messageModel.time}"
             if (messageModel.sender == 1)
-                if (messageModel.message.length > 15)
-                    messege.text = "You: ${messageModel.message.substring(0, 15)}"
-                else
-                    messege.text = "You: ${messageModel.message}"
+                messege.text = "You: ${messageModel.message}"
             else
-                if (messageModel.message.length > 15)
-                    messege.text = "${messageModel.message.substring(0, 15)}"
-                else
-                    messege.text = "${messageModel.message}"
+                messege.text = "${messageModel.message}"
             if (messageModel.isNew)
                 newIndicator.visibility = View.VISIBLE
             else
@@ -145,7 +183,7 @@ class GroupsMessagesAdapter : RecyclerView.Adapter<GroupsMessagesAdapter.ViewHol
                 newIndicator.visibility = View.VISIBLE
                 name.setTypeface(null, Typeface.BOLD)
                 messege.setTypeface(null, Typeface.BOLD)
-                messege.setTextColor(context.resources.getColor(R.color.colorBlack))
+                messege.setTextColor(context.resources.getColor(R.color.ColorText))
             } else {
                 newIndicator.visibility = View.GONE
             }

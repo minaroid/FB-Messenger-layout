@@ -20,6 +20,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             tools:text="Leaders"
+            style="@style/TitleTheme"
+            android:textColor="#000"
             android:layout_marginTop="10dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/im_image"
@@ -46,9 +48,10 @@
                   android:text="SEND MESSAGE"
                   android:textStyle="bold"
                   android:textSize="10sp"
+                  style="@style/TitleTheme"
+
                   android:layout_gravity="center"
                   android:drawablePadding="5dp"
-                  android:textColor="@color/colorBlack"
         />
     </LinearLayout>
 
