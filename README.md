@@ -5,9 +5,8 @@ This repository contains a copy of facebook messenger layout.
 
 # Screenshots :
 
-<img src="screenshots/screen-1.png" width="250"/> <img src="screenshots/screen-2.png" width="250"/>
+<img src="screenshots/screenshot-1.png" width="250"/> <img src="screenshots/screenshot-2.png" width="250"/> <img src="screenshots/screenshot-3.png" width="250"/>
 
-<img src="screenshots/screen-3.png" width="250"/>
 
 
 ### Contributing.
